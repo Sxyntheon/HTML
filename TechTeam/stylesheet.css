@@ -20,14 +20,14 @@ h1 {
     margin: 0;
 }
 
-.part1 {
+#part1 {
+    animation: changeToYellow .25s;
     color: yellow;
-    background-color: black;
 }
 
-.part2 {
-    color: yellow;
-    background-color: black;
+#part2 {
+    animation: changeToBlack .25s;
+    color: black;
 }
 .slider {
     background-color: yellow;
@@ -35,21 +35,40 @@ h1 {
     width: 50%;
     height: 100%;
     position: absolute;
-    animation: sliderOverOut 1s none;
+    animation: sliderOverOut .25s none;
+    z-index: -1;
 }
 
 .head:hover > .slider {
-    animation: sliderOverIn 1s both
+    animation: sliderOverIn .25s both
 }
-.head:hover > h1.part1 {
+.head:hover #part1 {
+    animation: changeToBlack .25s;
     color: black;
+}
+
+.head:hover #part2 {
+    animation: changeToYellow .25s;
+    color: yellow;
 }
 
 @keyframes sliderOverIn {
     from {margin-left: 42%; witdh: 50%;}
     to {margin-left: -1%; width: 40%;}
 }
+
 @keyframes sliderOverOut {
     from {margin-left: -1%; width: 40%;}
     to {margin-left: 42%; witdh: 50%;}
+}
+
+@keyframes changeToYellow {
+    from {color: black}
+    to {color: yellow}
+}
+
+@keyframes changeToBlack {
+    from {color: yellow}
+    to {color: black}
+    
 }
