@@ -1,5 +1,5 @@
 :root {
-    font-size: 16px;
+    font-size: 1vw;
     color: moccasin;
 }
 
@@ -12,7 +12,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 0.75rem;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-track {
@@ -37,10 +37,30 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: center;
 }
 
+nav {
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+li {
+    display: inline;
+    float: left;
+    margin: 1rem
+}
+
+
 .footnote {
     font-weight: 100;
     animation: slideInFootnote 5s ease 3s both normal;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #unlock  {
@@ -78,7 +98,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 @keyframes slideInFootnote {
     from {margin-left: -200%}
-    to {margin-left: 20%; margin-right: 20%;}
+    to {margin-left: 0%; margin-right: 0%;}
 }
 
 @keyframes slideInFillIn {
