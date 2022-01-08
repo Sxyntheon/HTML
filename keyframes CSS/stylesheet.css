@@ -12,7 +12,8 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
+    max-width: 16px;
+    width: 1vw;
 }
 
 body::-webkit-scrollbar-track {
@@ -28,11 +29,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 ::selection {
-    background: rgb(30, 30, 30);
+    background: none;
+    color:rgb(253, 199, 106)
+}
+
+h1 {
+    margin: 0;
+    padding: 0px 3vw; 
 }
 
 
 .head {
+    margin-top: 1em;
     font-family: 'Poppins', sans-serif;    
     text-align: center;
 }
@@ -55,6 +63,7 @@ li {
 
 
 .footnote {
+    margin-top: 1em;
     font-weight: 100;
     animation: slideInFootnote 5s ease 3s both normal;
     text-align: center;
@@ -69,6 +78,7 @@ li {
     border: none;
     border-radius: .5rem;
     color: rgb(50, 50, 50);
+    padding: .25vw;
 }
 
 #unlock:hover {
@@ -95,6 +105,12 @@ li {
 .slide {
     animation: slideInFillIn 1s ease forwards normal;
 }
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
 
 @keyframes slideInFootnote {
     from {margin-left: -200%}

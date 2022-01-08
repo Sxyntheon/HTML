@@ -19,5 +19,4 @@ function showTime() {
     let timer = setTimeout(function(){showTime() }, 1000);
 
 }
-
 showTime()
