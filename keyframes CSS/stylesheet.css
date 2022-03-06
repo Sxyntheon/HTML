@@ -3,12 +3,25 @@
     color: moccasin;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(50, 50, 50);
     font-size: 2.75rem;
     margin: 0;
     padding: 0;
     overflow: visible;
+}
+
+nav {
+    font-family: "Poppins", sans-serif;
+    position: fixed;
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    z-index: 1;
+    height: 7.5rem;
 }
 
 body::-webkit-scrollbar {
@@ -38,15 +51,16 @@ h1 {
     padding: 0px 3vw; 
 }
 
+.logo {
+    position: relative;
+    margin: none;
+    transform-origin: center center;
+}
 
 .head {
     margin-top: 1em;
     font-family: 'Poppins', sans-serif;    
     text-align: center;
-}
-
-nav {
-    font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -61,11 +75,9 @@ li {
     margin: 1rem
 }
 
-
 .footnote {
     margin-top: 1em;
     font-weight: 100;
-    animation: slideInFootnote 5s ease 3s both normal;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -111,13 +123,11 @@ p {
     padding: 0;
 }
 
-
-@keyframes slideInFootnote {
-    from {margin-left: -200%}
-    to {margin-left: 0%; margin-right: 0%;}
-}
-
 @keyframes slideInFillIn {
     from {margin-left: 40%; margin-right: 0%; margin-top: 27.5%; opacity: 0%;}
     to {margin-left: 20%; margin-right: 20%; margin-top: 7.5%; opacity: 100%;}
+}
+
+@keyframes turnLogo {
+    50% {transform: rotate(360deg)};
 }
