@@ -57,22 +57,20 @@ h1 {
     transform-origin: center center;
 }
 
+.logo:hover {
+    animation: turnLogo 1s ease normal;
+}
+
 .head {
     margin-top: 1em;
     font-family: 'Poppins', sans-serif;    
     text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    margin-top: 1rem;
-    margin-left: 1rem;
-}
-
 li {
     display: inline;
     float: left;
-    margin: 1rem
+    margin-left: 2rem;
 }
 
 .footnote {
@@ -129,5 +127,5 @@ p {
 }
 
 @keyframes turnLogo {
-    50% {transform: rotate(360deg)};
+    100% {transform: rotate(360deg)};
 }
